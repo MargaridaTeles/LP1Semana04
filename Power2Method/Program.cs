@@ -6,7 +6,8 @@ namespace Power2Method
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            PowerOf2Until5();
+            PowerOf2Until5();
         }
         private static void PowerOf2Until5()
         {
