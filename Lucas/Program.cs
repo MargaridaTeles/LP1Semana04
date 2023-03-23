@@ -4,11 +4,20 @@ namespace Lucas
 {
     class Program
     {
+        /// <summary>
+        /// Mostra a sequencia de Lucas com index n
+        /// </summary>
+        /// <param name="args"> Limite index</param>
         static void Main(string[] args)
         {
-            Console.WriteLine(Lucas(7));
+            int n = int.Parse(args[0]);
+            Console.WriteLine(Lucas(n));
         }
-
+        /// <summary>
+        /// Mostra a sequencia de Lucas com index em n
+        /// </summary>
+        /// <param name="n"> Limite do index</param>
+        /// <returns> Retorna o número indexado em n </returns>
         private static int Lucas(int n)
         {
             if(n == 0)
