@@ -10,11 +10,16 @@ namespace BetterDecorador
         /// <param name="args">Input from user</param>
         private static void Main(string[] args)
         {
-            string sentence = args[0];
-            char c = char.Parse(args[1]);
-            int num = int.Parse(args[2]);
-            
-            Console.WriteLine(Decor(sentence, c, num));
+            if (args.Length != 0)
+            {
+                string sentence = args[0];
+                char c = char.Parse(args[1]);
+                int num = int.Parse(args[2]);
+                
+                Console.WriteLine(Decor(sentence, c, num));
+            }
+            else
+                Console.WriteLine(Decor());
         }
 
         /// <summary>
@@ -27,6 +32,16 @@ namespace BetterDecorador
         private static string Decor(string s, char dec, int num)
         {
             return $"{new string(dec, num)} {s} {new string(dec, num)}";
+        }
+
+        /// <summary>
+        /// Method with the same name but make the text when 
+        /// the user don't pass the arguments for decoration
+        /// </summary>
+        /// <returns>The default text with decoration</returns>
+        private static string Decor()
+        {
+            return Decor("User did not specify args!", '=', 3);
         }
     }
 }
